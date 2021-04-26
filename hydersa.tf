@@ -1,14 +1,10 @@
 provider "aws" {
 region = "eu-west-2"
-access_key = ""
-secret_key = ""
+access_key = "AKIAX4EFVBORR4JO6UHJ"
+secret_key = "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"
 }
-resource "aws_elasticache_cluster" "sam_cluster" {
-cluster_id = "sameer"
-engine = "redis"
-node_type = "cache.t2.micro"
-num_cache_nodes = "1"
-parameter_group_name = "default.redis3.2"
-engine_version = "3.2.10"
-port = "6379"
+resource "aws_s3_bucket" "bucket123" {
+bucket = "sameer321"
+acl = "private"
 }
+
